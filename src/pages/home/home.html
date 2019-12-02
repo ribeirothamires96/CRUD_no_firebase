@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Veicle Management
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card *ngFor="let veicle of veicles | async" (click)="onItemClick(veicle)">
+    <ion-card-header>
+      {{veicle.name}}
+    </ion-card-header>
+    <ion-card-content>
+      <ion-card-title>
+        {{veicle.model}}
+      </ion-card-title>
+      <p>
+        {{veicle.color}}
+      </p>
+      <p>
+        {{veicle.licensePlate}}
+      </p>
+    </ion-card-content>
+  </ion-card>
+  <ion-fab end bottom>
+    <button ion-fab color="primary" (click)="onAddClick()">
+      <ion-icon name="add"></ion-icon>
+    </button>
+  </ion-fab>
+</ion-content>

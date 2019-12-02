@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{veicle.model}}</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="onTrash()" *ngIf="!newveicleFlag">
+        <ion-icon name="trash"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-label fixed>Name</ion-label>
+      <ion-input type="text" [(ngModel)]="veicle.name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label fixed>Model</ion-label>
+      <ion-input type="text" [(ngModel)]="veicle.model"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label fixed>Color</ion-label>
+      <ion-input type="text" [(ngModel)]="veicle.color"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label fixed>License Plate</ion-label>
+      <ion-input type="text" [(ngModel)]="veicle.licensePlate"></ion-input>
+    </ion-item>
+  </ion-list>
+</ion-content>
